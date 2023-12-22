@@ -1,0 +1,6 @@
+# Replace the RUN_USER & RUN_GROUP variable
+
+echo "Replacing"
+envsubst < /nginx.conf.template > /etc/nginx/nginx.conf
+
+cat /etc/nginx/nginx.conf

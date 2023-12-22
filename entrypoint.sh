@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function run_scripts () {
 	SCRIPTS_DIR="/scripts/$1.d"
 	SCRIPT_FILES_PATTERN="^${SCRIPTS_DIR}/[0-9][0-9][a-zA-Z0-9_-]+$"
@@ -12,4 +14,7 @@ function run_scripts () {
 }
 
 run_scripts pre-launch
-nginx -g daemon off;
+
+nginx -g "daemon off;"
+
+exec "$@"

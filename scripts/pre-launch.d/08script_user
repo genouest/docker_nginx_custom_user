@@ -1,3 +1,8 @@
+echo "ENV VAR"
+
+echo "$UID"
+echo "$RUN_USER"
+
 if [ -n "$GID" ]; then
 	GIDoption="--gid $GID"
 	getent group $RUN_GROUP &> /dev/null || groupadd $GIDoption $RUN_GROUP
@@ -18,9 +23,4 @@ fi
 if [ -n "$UID" ]; then
 	UIDoption="--uid $UID"
 	id -u $RUN_USER &> /dev/null || useradd -d /tmp/$RUN_USER --create-home --no-user-group $UIDoption $GIDoption $otherGIDoption $RUN_USER
-fi
-
-if [ -n "$ES_UID" ]; then
-	UIDoption="--uid $ES_UID"
-	id -u $ES_USER &> /dev/null || useradd -d /tmp/$ES_USER --create-home --no-user-group $UIDoption $ES_USER
 fi
