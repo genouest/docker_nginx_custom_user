@@ -1,8 +1,3 @@
-echo "ENV VAR"
-
-echo "$UID"
-echo "$RUN_USER"
-
 if [ -n "$GID" ]; then
 	GIDoption="--gid $GID"
 	getent group $RUN_GROUP &> /dev/null || groupadd $GIDoption $RUN_GROUP
