@@ -12,4 +12,5 @@ UID: (Optional), require RUN_USER) Custom user UID for nginx worker.
 RUN_GROUP: (Optional, require GID) Custom user group for nginx worker. Default to nginx.
 GID: (Optional), require RUN_GROUP) Custom group GID for nginx worker.
 OTHER_GID: (Optional) Other groups ID to add.
+OTHER_RUN_GROUP: (Optional) Other groups names to add.
 ```
