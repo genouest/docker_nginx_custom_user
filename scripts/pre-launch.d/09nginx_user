@@ -1,3 +1,3 @@
 # Replace the RUN_USER & RUN_GROUP variable
 
-envsubst < /nginx.conf.template > /etc/nginx/nginx.conf
+envsubst '${RUN_USER} ${RUN_GROUP}' < /nginx.conf.template > /etc/nginx/nginx.conf
