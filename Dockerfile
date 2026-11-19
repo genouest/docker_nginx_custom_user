@@ -1,4 +1,4 @@
-FROM nginx:1.30.5 AS fancyindex-builder
+FROM nginx:1.31.9 AS fancyindex-builder
 
 ARG FANCYINDEX_VERSION=0.6.0
 
