@@ -16,7 +16,7 @@ RUN curl -fsSL "https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz" | tar 
     && make modules
 
 # ---- Final image ----
-FROM nginx:1.30.5
+FROM nginx:1.31.9
 
 COPY --from=fancyindex-builder /tmp/nginx-*/objs/ngx_http_fancyindex_module.so /usr/lib/nginx/modules/
 
